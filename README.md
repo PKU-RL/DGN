@@ -1,2 +1,3 @@
 # GraphConv4MARL
-DGN Code
+
+DGN with the routing task presented in the paper (Graph Convolution Reinformance Learning for Multi-Agent Cooperation)
