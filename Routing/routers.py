@@ -207,19 +207,20 @@ def MultiHeadsAttModel(l=2, d=128, dv=16, dout=128, nv = 8 ):
 	v = Reshape((l, nv, dv))(v2)
 	q = Reshape((l, nv, dv))(q2)
 	k = Reshape((l, nv, dv))(k2)
-		
-	att = Lambda(lambda x: K.batch_dot(x[0],x[1] ,axes=[-1,-1]) / np.sqrt(dv))([q,k])# l, nv, nv
-	att= Lambda(lambda x:  K.softmax(x))(att)
+	v = Lambda(lambda x: K.permute_dimensions(x, (0,2,1,3)))(v)
+	k = Lambda(lambda x: K.permute_dimensions(x, (0,2,1,3)))(k)
+	q = Lambda(lambda x: K.permute_dimensions(x, (0,2,1,3)))(q)
 
-	out = Lambda(lambda x: K.batch_dot(x[0], x[1],axes=[4,3]))([att, v])
-	out = Reshape((l, d))(out)
-	
-	out = Add()([out, q1])
+	att = Lambda(lambda x: K.batch_dot(x[0],x[1] ,axes=[3,3]) / np.sqrt(dv))([q,k])# l, nv, nv
+	att = Lambda(lambda x: K.softmax(x))(att)
+	out = Lambda(lambda x: K.batch_dot(x[0], x[1],axes=[3,2]))([att, v])
+	out = Lambda(lambda x: K.permute_dimensions(x, (0,2,1,3)))(out)
+
+	out = Reshape((l, dv*nv))(out)
 
 	T = Lambda(lambda x: K.batch_dot(x[0],x[1]))([ve,out])
 
 	out = Dense(dout, activation = "relu",kernel_initializer='random_normal')(T)
-
 	model = Model(inputs=[q1,k1,v1,ve], outputs=out)
 	return model
 
@@ -275,7 +276,7 @@ for j in range(n_data):
 	V.append(q_net([feature[j],relation1[j],relation2[j]]))
 
 model = Model(input=In,output=V)
-model.compile(optimizer=Adam(lr = 0.0001), loss='mse')
+model.compile(optimizer=Adam(lr = 0.001), loss='mse')
 
 ######build the target model#########
 encoder_t = MLP()
@@ -383,12 +384,11 @@ while(1):
 		score = 0
 		num = 0
 		total_time = 0
-		alpha*=0.996
-		if alpha<0.01:
-			alpha=0.01
+		
 
 	if i_episode < episode_before_train:
 		continue
+	
 
 	#########training#########
 	batch = buff.getBatch(mini_batch)
