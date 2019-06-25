@@ -9,9 +9,13 @@ DGN works as follows. First, each agent encodes the observation and sends the fe
 
 All agents share weights for the modules. The main reason is that agents use relation kernels to extract their relations based the encodings of their observations. If the encoders are different (agents encodes the observation in different ways), the relation kernels can hardly learn to extract their relations since the graph of agents is highly dynamic. 
 
-**Another very important benefit comes from parameter-sharing among agents is DGN can natually avoid non-stationarity.**    
+Another very important benefit comes from parameter-sharing among agents is **DGN can naturally avoid non-stationarity.** From the optimization point of view, DGN optimizes a set of parameters for N objectives, one objective for each agent. As illustrated in the figure above, DGN as a whole can be seen as taking all the observations as input and outputting actions for all the agents, and thus DGN implicitly avoids the non-stationarity. 
+
+**DGN** is simply and effcient. It emprically outperforms many state-of-art algorithms. DGN is also easy to deploy and applicable to many real applications. DGN has bee applied to traffic signal control (https://arxiv.org/abs/1905.05717). 
 
 *The paper [Learning Transferable Cooperative Behavior in Multi-Agent Teams](https://arxiv.org/pdf/1906.01202.pdf) mentions that our DGN is limited by the fixed number of agent neigbhors. This is not true. DGN does not have this limitation. The fixed number came from our implementations. Our current implementations are based on TensorFlow, however, tensorFlow does not support dynamic computational graph. So, we fix the number of neighbors for each agent in these implementations. Indeed, DGN adapts to fully dynamic environments, no matter how many neighbors each agent has at a timestep and no matter how the graph of agents changes (disconnected or fully connected). We will appriciate it if anyone can implement DGN using PyTorch. Please let us know if you need any help.*
+
+
 
 
 Please cite our paper if you are using the codes.
