@@ -9,9 +9,7 @@ DGN is graph convolutional reinforcement learning, where the multi-agent environ
 The codes are the implementations of DGN in the three scenarios, i.e., Jungle, Battle and Routing, presented in the paper
 [Graph Convolution Reinforcement Learning for Multi-Agent Cooperation](https://arxiv.org/abs/1810.09202)
 
-DGN works as follows. First, each agent encodes the observation and sends the features to its neighboring agents. Then, each agent integrates the received features using relation kernel and again sends it to its neighboring agents. The process continues as more CONV layers are added. Finally, the features of all the preceding layers are concatenated and fed into Q network. 
-
-All agents share weights for the modules. The main reason is that agents use relation kernels to extract their relations based the encodings of their observations. If the encoders are different (agents encodes the observation in different ways), the relation kernels can hardly learn to extract their relations since the graph of agents is highly dynamic. 
+In DGN, all agents share weights for the modules. The main reason is that agents use relation kernels to extract their relations based the encodings of their observations. If the encoders are different (agents encodes the observation in different ways), the relation kernels can hardly learn to extract their relations since the graph of agents is highly dynamic. 
 
 Another very important benefit comes from parameter-sharing among agents is **DGN can naturally avoid non-stationarity.** From the optimization point of view, DGN optimizes a set of parameters for N objectives, one objective for each agent. As illustrated in the figure above, DGN as a whole can be seen as taking all the observations as input and outputting actions for all the agents, and thus DGN implicitly avoids the non-stationarity. 
 
