@@ -26,8 +26,10 @@ Another very important benefit comes from parameter-sharing among agents is **DG
 
 ### Applications
 
-DGN is simple and effcient. It emprically outperforms many state-of-art algorithms. DGN is applicable to many real applications. DGN has bee applied to traffic signal control by researchers ([CoLight: Learning Network-level Cooperation for Traffic Signal Control](https://arxiv.org/abs/1905.05717)). 
+DGN is simple and effcient. It emprically outperforms many state-of-art algorithms. DGN is applicable to many real applications. DGN has been applied to:
+* **Traffic signal control** by researchers from Penn State ([CoLight: Learning Network-level Cooperation for Traffic Signal Control](https://arxiv.org/abs/1905.05717)). 
 
+We expect DGN will be widely applied to many more multi-agent applications. 
 
 ### Issues
 
