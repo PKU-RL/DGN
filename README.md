@@ -1,6 +1,8 @@
 # DGN
 
-**Peking University**
+By Jiechuan Jiang, Chen Dun, Zongqing Lu
+
+Peking University.
 
 <img src="arch.png" alt="DGN" width="500">
 
