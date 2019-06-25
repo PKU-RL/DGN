@@ -3,7 +3,7 @@
 **The codes are the implementations of DGN in the three scenarios (Jungle, Battle, and Routing) presented in the paper
 [Graph Convolution Reinforcement Learning for Multi-Agent Cooperation](https://arxiv.org/abs/1810.09202)**
 
-![DGN](https://github.com/PKU-AI-Edge/DGN-Paper/blob/master/figures/arch.pdf "DGN")
+![DGN](https://github.com/PKU-AI-Edge/GraphConv4MARL/blob/master/arch.png "DGN")
 
 
 **DGN** functionally consists of three components: graph convolution, relation kernel, and temporal regularization. 
