@@ -2,13 +2,14 @@
 
 By Jiechuan Jiang, Chen Dun, Zongqing Lu
 
-Peking University.
+**Peking University**.
 
-<img src="arch.png" alt="DGN" width="500">
 
 ### Introduction
 
 DGN is graph convolutional reinforcement learning, where the multi-agent environment is modeled as a graph, each agent is a node, and the encoding of local observation of agent is the feature of node. We apply convolution to the graph of agents. By employing multi-head attention as the convolution kernel, graph convolution is able to extract the relation representation between nodes and convolve the features from neighboring nodes just like a neuron in a convolutional neural network (CNN). Latent features extracted from gradually increased receptive fields are exploited to learn cooperative policies. Moreover, the relation representation is temporally regularized to help the agent develop consistent cooperative policy.
+
+<img src="arch.png" alt="DGN" width="500">
 
 The codes are the implementations of DGN in the three scenarios, i.e., Jungle, Battle and Routing, presented in the paper
 [Graph Convolution Reinforcement Learning for Multi-Agent Cooperation](https://arxiv.org/abs/1810.09202)
