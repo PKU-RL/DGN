@@ -39,12 +39,12 @@ We expect DGN will be widely applied to many more multi-agent applications.
 
 If you are using the codes, please cite our paper.
 
-[Jiechuan Jiang, Chen Dun, and Zongqing Lu. *Graph convolutional reinforcement learning for multi-agent cooperation*. arXiv preprint arXiv:1810.09202, 2018.](https://arxiv.org/abs/1810.09202)
+[Jiechuan Jiang, Chen Dun, Tiejun Huang, and Zongqing Lu. *Graph convolutional reinforcement learning*. ICLR'20.](https://arxiv.org/abs/1810.09202)
 
-	@article{jiang2018graph,
-        	title={Graph Convolutional Reinforcement Learning for Multi-Agent Cooperation},
-        	author={Jiang, Jiechuan and Dun, Chen and Lu, Zongqing},
-        	journal={arXiv preprint arXiv:1810.09202},
-        	year={2018}
+	@inproceedings{jiang2020graph,
+        	title={Graph Convolutional Reinforcement Learning},
+        	author={Jiang, Jiechuan and Dun, Chen and Huang, Tiejun and Lu, Zongqing},
+        	booktitle={ICLR},
+        	year={2020}
 	}
 
