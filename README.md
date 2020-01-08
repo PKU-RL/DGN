@@ -1,6 +1,6 @@
 # DGN
 
-By Jiechuan Jiang, Chen Dun, Zongqing Lu
+Written by Jiechuan Jiang and Zongqing Lu
 
 **Peking University**.
 
