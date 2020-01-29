@@ -17,7 +17,7 @@ DGN is graph convolutional reinforcement learning, where the multi-agent environ
 <img src="arch.png" alt="DGN" width="500">
 
 The codes are the implementations of DGN in the three scenarios, i.e., Jungle, Battle and Routing, presented in the paper
-[Graph Convolution Reinforcement Learning for Multi-Agent Cooperation](https://arxiv.org/abs/1810.09202)
+[Graph Convolution Reinforcement Learning](https://arxiv.org/abs/1810.09202)
 
 In DGN, all agents share weights for the modules. The main reason is that agents use relation kernels to extract their relations based the encodings of their observations. If the encoders are different (agents encodes the observation in different ways), the relation kernels can hardly learn to extract their relations since the graph of agents is highly dynamic. 
 
@@ -29,7 +29,7 @@ Another very important benefit comes from parameter-sharing among agents is **DG
 DGN is simple and effcient. It emprically outperforms many state-of-art algorithms. DGN is applicable to many real applications. DGN has been applied to:
 * **Traffic signal control** by researchers from Penn State ([CoLight: Learning Network-level Cooperation for Traffic Signal Control](https://arxiv.org/abs/1905.05717)). 
 
-We expect DGN will be widely applied to many more multi-agent applications. 
+We expect DGN will be widely applied to many more applications. 
 
 ### Issues
 
