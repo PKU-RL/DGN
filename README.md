@@ -6,9 +6,10 @@ Written by Jiechuan Jiang and Zongqing Lu
 
 ### Table of Contents
 1. [Introduction](#introduction)
-2. [Applications](#applications)
-3. [Issues](#issues)
-4. [Citation](#citation)
+2. [Dependencies](#dependencies)
+3. [Applications](#applications)
+4. [Issues](#issues)
+5. [Citation](#citation)
 
 ### Introduction
 
@@ -24,16 +25,25 @@ In DGN, all agents share weights for the modules. The main reason is that agents
 Another very important benefit comes from parameter-sharing among agents is **DGN can naturally avoid non-stationarity.** From the optimization point of view, DGN optimizes a set of parameters for N objectives, one objective for each agent. As illustrated in the figure above, DGN as a whole can be seen as taking all the observations as input and outputting actions for all the agents, and thus DGN implicitly avoids the non-stationarity. 
 
 
+### Dependencies
+
+Install dependencies using pip.
+
+```shell
+python -m pip install -r requirements.txt
+```
+
+
 ### Applications
 
-DGN is simple and effcient. It emprically outperforms many state-of-art algorithms. DGN is applicable to many real applications. DGN has been applied to:
+DGN is simple and efficient. It empirically outperforms many state-of-art algorithms. DGN is applicable to many real applications. DGN has been applied to:
 * **Traffic signal control** by researchers from Penn State ([CoLight: Learning Network-level Cooperation for Traffic Signal Control](https://arxiv.org/abs/1905.05717)). 
 
 We expect DGN will be widely applied to many more applications. 
 
 ### Issues
 
-*The paper ([Learning Transferable Cooperative Behavior in Multi-Agent Teams](https://arxiv.org/pdf/1906.01202.pdf)) mentions that our DGN is limited by the fixed number of agent neigbhors. This is not true. DGN does not have this limitation. The fixed number came from our implementations. Our current implementations are based on TensorFlow, however, tensorFlow does not support dynamic computational graph. So, we fix the number of neighbors for each agent in these implementations. Indeed, DGN adapts to fully dynamic environments, no matter how many neighbors each agent has at a timestep and no matter how the graph of agents changes (disconnected or fully connected). We will appriciate it if anyone can implement DGN using PyTorch. Please let us know if you need any help.*
+*The paper ([Learning Transferable Cooperative Behavior in Multi-Agent Teams](https://arxiv.org/pdf/1906.01202.pdf)) mentions that our DGN is limited by the fixed number of agent neighbors. This is not true. DGN does not have this limitation. The fixed number came from our implementations. Our current implementations are based on TensorFlow, however, tensorFlow does not support dynamic computational graph. So, we fix the number of neighbors for each agent in these implementations. Indeed, DGN adapts to fully dynamic environments, no matter how many neighbors each agent has at a timestep and no matter how the graph of agents changes (disconnected or fully connected). We will appreciate it if anyone can implement DGN using PyTorch. Please let us know if you need any help.*
 
 ### Citation
 
