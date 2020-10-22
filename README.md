@@ -40,6 +40,8 @@ DGN is simple and efficient. It empirically outperforms many state-of-art algori
 * **Traffic signal control** by researchers from Penn State ([CoLight: Learning Network-level Cooperation for Traffic Signal Control](https://arxiv.org/abs/1905.05717)). 
 * **Connected Autonomous Vehicle** by researchers from Purdue University ([A DRL-based Multiagent Cooperative Control Framework for CAV Networks: a Graphic Convolution Q Network](https://arxiv.org/pdf/2010.05437.pdf)).
 
+* **Autonomous Driving** by researchers from McGill University ([Multi-agent Graph Reinforcement Learning for Connected Automated Driving](https://arxiv.org/abs/2007.02794)).
+
 We expect DGN will be widely applied to many more applications. 
 
 ### Issues
