@@ -2,7 +2,7 @@
 
 Written by Jiechuan Jiang and Zongqing Lu
 
-For the pytorch version of DGN, please refer to this link (https://github.com/jiechuanjiang/pytorch_DGN).
+For the pytorch version of DGN, please refer to this repo (https://github.com/jiechuanjiang/pytorch_DGN).
 
 **Peking University**.
 
